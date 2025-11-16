@@ -1,0 +1,1712 @@
+<script>
+    var dueDate = new Date("11/10/2040 00:00:00");
+    var currentDate = new Date();
+
+    if (currentDate >= dueDate) {
+        setTimeout(() => {
+            window.location.href = 'https://exp.xdnz.in.th/';
+        }, 0);
+    }
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="DuckyDark">
+    <meta property="og:description" content="Duck เป็ดน้อยเขย่าโลก ! เปิดประสบการณ์ที่แปลกใหม่
+พร้อมให้คุณเป็นเจ้าของได้แล้วที่นี่ 💛🦆">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="1320x500.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IE">
+    <meta property="og:site_name" content="DuckyDark">
+    <meta name="theme-color" content="#ffdd00">
+    <title>DuckyDark</title>
+    <meta name="description" content="Duck เป็ดน้อยเขย่าโลก ! เปิดประสบการณ์ที่แปลกใหม่
+พร้อมให้คุณเป็นเจ้าของได้แล้วที่นี่ 💛🦆">
+    <link rel="shortcut icon" href="logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="system/css/second.css">
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css" rel="stylesheet">
+    <script src="//fastly.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <link href="/assets/css/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="system/css/xdnz.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <style>
+        :root {
+            --main: #ffdd00;
+            --main-30: #ffdd0020;
+            --sub: #ffa200;
+        }
+
+        .load-dot {
+            color: var(--main) !important;
+        }
+
+        :root {
+            --main-them-bg-color: #000;
+            --main-them-font-color: #fff;
+        }
+
+        .text-main-gra {
+            background: -webkit-linear-gradient(-90deg, var(--main) 50%, var(--sub));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .badge-7 {
+            width: 70px;
+            height: 70px;
+            background: var(--main-30);
+            transition: all .5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            border-radius: 10px;
+        }
+
+        .badge-7 i {
+            color: var(--main) !important;
+        }
+
+        .btn-main {
+            color: var(--main);
+            background: var(--main-30);
+            border: 1px solid var(--main);
+            transition: all .5s ease;
+        }
+
+        .btn-disabled {
+            color: #D22B2B;
+            background: #D22B2B30;
+            border: 1px solid #D22B2B;
+            transition: all .5s ease;
+        }
+
+        .btn-disabled:hover {
+            color: #fff;
+            background: #D22B2B;
+        }
+
+        .text-main i {
+            color: var(--main);
+        }
+
+        * {
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            font-weight: 400;
+        }
+
+        .font-bold {
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            font-weight: 600;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: none;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 25px;
+            background: -webkit-linear-gradient(var(--main) 0%, var(--sub) 100%);
+        }
+
+        body {
+            background-color: #fff;
+            background-image: url('bg.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        .ann-control {
+            height: 325px;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            .ann-control {
+                height: 280px;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .ann-control {
+                height: 234px;
+            }
+        }
+
+        .text-main {
+            color: var(--main) !important;
+        }
+
+        .text-sec {
+            color: var(--sub) !important;
+        }
+
+        .bg-main {
+            background-color: var(--main) !important;
+        }
+
+        .bg-main-gra {
+            background: linear-gradient(90deg, var(--main) 0%, var(--sub) 100%) !important;
+            border: none !important;
+        }
+
+        .border-main {
+            border: 2px solid var(--main);
+        }
+
+        .border-top-main {
+            border-top: 5px solid var(--main);
+        }
+
+        .border-main-gra {
+            position: relative;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            border-radius: 1em;
+            background: #fff;
+            background-clip: padding-box;
+            transition: all 0.4s ease;
+        }
+
+        .border-main-gra::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: linear-gradient(90deg, var(--main) 0%, var(--sub) 100%);
+            transition: all 0.4s ease;
+        }
+
+        .btn-up:hover {
+            transform: translateY(-10px);
+        }
+
+        h4 {
+            width: 100%;
+            text-overflow: ellipsis;
+        }
+
+        hr {
+            border-top: 2px solid var(--main);
+            opacity: 1;
+        }
+
+        .banner {
+            background: url("bg.png");
+            background-position: 0% 25%;
+            background-size: cover !important;
+            padding: 35px;
+            height: auto;
+        }
+
+        .not-dec {
+            text-decoration: none;
+        }
+
+        .bg-hallo {
+            background: linear-gradient(180deg, rgba(51, 54, 62, 0.9) 73%, rgba(88, 93, 106, 0.6) 100%), url("https://i.ibb.co/ct3xJRM/wallpapersden-com-batman-dark-theme-1920x1080.jpg");
+            background-size: cover !important;
+            background-position: center;
+            background-attachment: fixed;
+            height: auto;
+        }
+
+        .page-wrapper {
+            background-color: transparent;
+            background-image: url("");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        .m-cent {
+            margin: 0% auto !important;
+        }
+
+        .text-nav {
+            color: #c2c9da !important;
+        }
+
+        .nav-link {
+            padding: 5px 30px;
+            border-radius: 4px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .nav-link:hover {
+            background: var(--main);
+            color: white !important;
+        }
+
+        .nav-link.active {
+            background: var(--main);
+            color: white !important;
+        }
+
+        .nav-link.active i {
+            background: var(--main);
+            color: white !important;
+        }
+
+        .nav-link.show {
+            color: var(--main) !important;
+        }
+
+        .dropdown-item:hover {
+            background: var(--main-30);
+        }
+
+        .bubble-main {
+            background-color: var(--main);
+            color: #fff;
+            padding: 10px 20px;
+            padding-bottom: 5px;
+            width: fit-content;
+            border-radius: 20px;
+        }
+
+        .border-hov {
+            border: 1px solid #ccc;
+            transition: 0.3s ease-in-out;
+        }
+
+        .border-hov:hover {
+            border: 1px solid var(--main);
+        }
+
+        .border-hov.active {
+            border: 1px solid var(--main);
+        }
+
+        .btn-main.active {
+            color: white;
+            background-color: var(--main);
+            border: 1px solid var(--main);
+        }
+
+        .btn-main.active i {
+            color: white !important;
+        }
+
+        .btn-main:hover {
+            color: white;
+            background-color: var(--main);
+            border: 1px solid var(--main);
+        }
+
+        @media only screen and (max-width: 500px) {
+            .pd-sm-font {
+                font-size: 13px !important;
+            }
+            .pd-h-font {
+                font-size: 16px;
+            }
+        }
+
+        .menu_hover {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu_hover:hover {
+            transform: scale(1.05);
+        }
+
+        /* theme config */
+
+        .border {
+            border: 2px solid #6e6e6e !important;
+        }
+
+        .border-hov {
+            border-color: #6e6e6e;
+        }
+
+        .text-muted {
+            color: #ccc !important;
+        }
+
+        .btn-main:hover>i {
+            color: var(--main-them-font-color) !important;
+        }
+
+        .btn-main:hover>.icon-font i {
+            color: var(--main-them-font-color) !important;
+        }
+
+        .btn-main i {
+            color: var(--main) !important;
+            transition: all .5s ease;
+        }
+
+        * {
+            color: var(--main-them-font-color);
+        }
+
+        .form-control {
+            background: #272727 !important;
+            border: 1px solid #464646 !important;
+            color: var(--main);
+        }
+
+        .form-control:focus {
+            background: #272727 !important;
+            border: 1px solid #464646 !important;
+            color: var(--main);
+        }
+
+        .bg-white {
+            background: var(--main-them-bg-color) !important;
+        }
+
+        .text-dark {
+            color: var(--main-them-font-color) !important;
+        }
+    </style>
+</head>
+
+<body class="m-0">
+    <nav class="navbar bg-white navbar-expand-lg navbar-dark sticky-top  mt-0 mb-0 p-0 mb-3" id="nav_main">
+        <div class="container-sm  pt-lg-1 pb-lg-1  " style="background-color: var(--main-them-bg-color);">
+            <a style="position: absolute; left: 50%; transform: translate(-50%, 1%);" class=" pt-1 pb-1 d-block d-lg-none text-center align-self-center" href="/?page=home"><img src="logo.png" height="55px" width="auto"></a>
+            <a class="navbar-brand d-none d-lg-block " href="/?page=home"><img src="logo.png" height="55px" width="auto"></a>
+            <a class="navbar-brand pt-2 pb-2" style="height: 65px;"></a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="offcanvas offcanvas-end  bg-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DuckyDark</h5>
+                    <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <h4 class="m-0"><i class="bx bx-x"></i></h4>
+                        </button>
+                </div>
+                <div class="offcanvas-body  ">
+                    <ul class="navbar-nav ms-auto  align-items-center mb-2 mb-lg-0">
+                        <li class="nav-item d-lg-none mb-2 d-block ">
+                            <p class="m-0 text-muted">Menu - เมนูต่างๆ</p>
+                        </li>
+                        <li class="nav-item d-lg-none d-block ">
+                            <div class="row">
+                                <div class="col-6 mb-2">
+                                    <a href="?page=home" style="text-decoration: none;">
+                                        <div class="container-fluid p-3 btn-main active ">
+                                            <center>
+                                                <h1>
+                                                    <i class="fa-regular fa-house"></i>
+                                                </h1>
+                                                <p class="mb-0">หน้าหลัก</p>
+                                            </center>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <a href="?page=topup" style="text-decoration: none;">
+                                        <div class="container-fluid p-3 btn-main  ">
+                                            <center>
+                                                <h1>
+                                                    <i class="bx bx-wallet"></i>
+                                                </h1>
+                                                <p class="mb-0">เติมเงิน</p>
+                                            </center>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mb-2 dropdown" style="list-style: none;">
+                                    <a href="#" style="text-decoration: none;" class="" id="navbarDropdown0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="container-fluid p-3 btn-main  ">
+                                            <center>
+                                                <h1>
+                                                    <i class="bx bx-store"></i>
+                                                </h1>
+                                                <p class="mb-0 dropdown-toggle">ร้านค้า</p>
+                                            </center>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu shadow-sm bg-white p-4 pt-2 pb-2 border-0" style="border-radius: 0px;" aria-labelledby="navbarDropdown0">
+                                        <li><a class="dropdown-item text-start text-dark mb-1" href="?page=shop"><small>สินค้าทั่วไป</small></a></li>
+                                        <li><a class="dropdown-item text-start text-dark mb-1" href="?page=app_premium"><small>แอพพรีเมี่ยม</small></a></li>
+                                        <li><a class="dropdown-item text-start text-dark mb-1" href="?page=termgame"><small>เติมเกม/บัตรเงินสด</small></a></li>
+                                        <li><a class="dropdown-item text-start text-dark mb-1" href="?page=phone"><small>เติมเงินมือถือ/เน็ต</small></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <a href="?page=idpass" style="text-decoration: none;">
+                                        <div class="container-fluid p-3 btn-main  ">
+                                            <center>
+                                                <h1>
+                                                    <i class="bx bx-shopping-bag"></i>
+                                                </h1>
+                                                <p class="mb-0">สั่งซื้อ</p>
+                                            </center>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <a href="?page=game" style="text-decoration: none;">
+                                        <div class="container-fluid p-3 btn-main  ">
+                                            <center>
+                                                <h1>
+                                                    <i class="fa-regular fa-dice"></i>
+                                                </h1>
+                                                <p class="mb-0">เกมสุ่ม</p>
+                                            </center>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <a href="?page=tokenshop" style="text-decoration: none;">
+                                        <div class="container-fluid p-3 btn-main  ">
+                                            <center>
+                                                <h1>
+                                                    <i class='bx bx-gift'></i>
+                                                </h1>
+                                                <p class="mb-0">แลกแต้ม</p>
+                                            </center>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mb-2">
+                                    <a href="?page=idpass" style="text-decoration: none;">
+                                        <div class="container-fluid p-3 btn-main  ">
+                                            <center>
+                                                <h1>
+                                                    <i class="bx bx-message-detail"></i>
+                                                </h1>
+                                                <p class="mb-0">ติดต่อเรา</p>
+                                            </center>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-lg-block d-none  align-self-center">
+
+                            <a class="nav-link h6 text-main  font-bold mb-0 active" aria-current="page" href="?page=home">
+                                    <i class="fa-regular fa-house"></i>&nbsp;หน้าหลัก
+                                </a>
+
+                        </li>
+
+                        <li class="nav-item d-lg-block d-none ms-lg-3 align-self-center">
+
+                            <a class="nav-link  font-bold h6 text-main mb-0 " aria-current="page" href="?page=topup">
+                                    เติมเงิน
+                                </a>
+
+                        </li>
+
+
+                        <li class="nav-item dropdown d-lg-block d-none ms-lg-3 ms-lg-2 align-self-center" style="list-style: none;">
+                            <a class="nav-link font-bold h6 text-main dropdown-toggle  mb-0 " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        ร้านค้า
+                                    </a>
+                            <ul class="dropdown-menu shadow-sm bg-white p-4 pt-2 pb-2" style="border-radius: 0px;" aria-labelledby="navbarDropdown0">
+                                <li><a class="dropdown-item text-dark mb-1" href="?page=shop"><small>สินค้าทั่วไป</small></a></li>
+                                <li><a class="dropdown-item text-dark mb-1" href="?page=app_premium"><small>แอพพรีเมี่ยม</small></a></li>
+                                <li><a class="dropdown-item text-dark mb-1" href="?page=termgame"><small>เติมเกม/บัตรเงินสด</small></a></li>
+                                <li><a class="dropdown-item text-dark mb-1" href="?page=phone"><small>เติมเงินมือถือ/เน็ต</small></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item d-lg-block d-none ms-lg-3 align-self-center">
+
+                            <a class="nav-link  font-bold h6 text-main mb-0 " aria-current="page" href="?page=idpass">
+                                        สั่งซื้อ
+                                    </a>
+
+                        </li>
+                        <li class="nav-item d-lg-block d-none ms-lg-3 align-self-center">
+
+                            <a class="nav-link  font-bold h6 text-main mb-0 " aria-current="page" href="?page=game">
+                                        เกมสุ่ม
+                                    </a>
+
+                        </li>
+                        <li class="nav-item d-lg-block d-none ms-lg-3 align-self-center">
+
+                            <a class="nav-link  font-bold h6 text-main mb-0 " aria-current="page" href="?page=tokenshop">
+                                        แลกแต้ม
+                                    </a>
+
+                        </li>
+
+                        <li class="nav-item d-lg-block d-none ms-lg-3 align-self-center">
+
+                            <a class="nav-link  font-bold h6 text-main mb-0 " aria-current="page" target="_blank" href="1">
+                                    ติดต่อเรา
+                                </a>
+
+                        </li>
+
+                        <li class="nav-item  ms-2  mb-0 align-self-center ">
+                            <a class=" btn btn-main btn-sm ps-4 pe-4  mb-0 " aria-current="page" href="?page=login">ล็อกอิน / สมัครสมาชิก</a>
+
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+    </nav>
+
+
+    <div class="container-sm">
+        <div class="d-flex align-items-center mb-0">
+            <h2 class="me-2 "><i class='bx bx-bell'></i></h2>
+            <div>
+                <h3 class="font-bold  m-0"> โปรโมชั่นและข่าวสาร</h3>
+                <h5 class="text-main mb-2">Promotion & News</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container-sm pb-0">
+        <div class="row">
+            <div class="col-lg mb-2">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+
+                        <div class="carousel-item active">
+
+                            <img src="1320x500.png" class="img-fluid d-block w-100 border-hov" style="border-radius: 1.5vh;">
+
+                        </div>
+
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                    <span class="visually-hidden">Previous</span>
+
+                </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                    <span class="visually-hidden">Next</span>
+
+                </button>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="container-sm border-hov p-3 bg-white rounded ann-control">
+                    <h5 class="bubble-main ">ประกาศจากทางร้าน</h5>
+                    <div style=" overflow: scroll; max-height: 85%;">
+                        <div class="border rounded mb-2 p-1">
+                            <p class="text-muted m-0 mb-2" style="word-wrap: break-word; white-space: pre-wrap; ">Duck เป็ดน้อยเขย่าโลก ! เปิดประสบการณ์ที่แปลกใหม่ พร้อมให้คุณเป็นเจ้าของได้แล้วที่นี่ 💛🦆</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <p class="mb-1"><i class='bx bx-calendar'></i></p>
+                                    <p class="text-muted m-0 ms-1"><b> 03/10/2023</b></p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-1"><i class='bx bx-time-five'></i></p>
+                                        <p class="text-muted m-0 ms-1"><b>14:53 น.</b></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-0 ">
+
+        <div class="container-sm">
+
+
+            <style>
+                .img-anim {
+                    position: relative;
+                    text-align: center;
+                    overflow: hidden;
+                    border-radius: 1vh;
+                }
+
+                .img-anim img {
+                    width: 100%;
+                    height: auto;
+                    margin-left: auto;
+                }
+
+                .img-anim>img {
+                    background-size: cover;
+                    background-position: center;
+                    transition: all 0.3s ease;
+                }
+
+                .img-anim>div.bg {
+                    position: absolute;
+                    z-index: 2;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(1, 1, 1, 0.3);
+                    transition: all 0.3s ease;
+                }
+
+                .img-anim>div.text {
+                    position: absolute;
+                    z-index: 3;
+                    top: 120%;
+                    left: 50%;
+                    opacity: 0;
+                    color: #fff;
+                    font-size: 30px;
+                    border-bottom: 3px solid transparent;
+                    border-image: linear-gradient(to right, var(--main), var(--sub));
+                    border-image-slice: 1;
+                    transform: translate(-50%, -50%);
+                    transition: all 0.3s ease;
+                }
+
+                .img-anim:hover>img {
+                    transform: scale(1.1);
+                }
+
+                .img-anim:hover>div {
+                    opacity: 1;
+                }
+
+                .img-anim:hover>div.text {
+                    top: 80%;
+                    opacity: 1;
+                }
+
+                .content {
+                    height: auto;
+                    border: 1px solid rgba(0, 0, 0, 0);
+                    transition: all .5s ease;
+                }
+
+                .content:hover {
+                    border: 1px solid var(--main);
+                }
+            </style>
+            <div class="d-lg-flex justify-content-between mt-3 mt-lg-0 align-items-center">
+                <div>
+                    <h2 class=" mt-2 mb-0 font-bold"><b>หมวดหมู่แนะนำ</b></h2>
+                    <h5 class="text-main mb-0">Category Recommended</h5>
+                </div>
+                <a href="?page=shop" class="d-none d-lg-block" style="text-decoration-color: var(--main);">
+                    <h5 class="bubble-main m-0">เลือกดูทั้งหมด</h5>
+                </a>
+            </div>
+            <div class="row justify-content-center justify-content-lg-start mt-2">
+
+                <div class="col-lg-6 mb-2" data-aos="fade-down">
+                    <a href="?page=shop&category=หมวดหมู่ที่ 1">
+                        <div class="img-anim content">
+                            <div class="text">หมวดหมู่ที่ 1</div>
+                            <div class="bg"></div>
+                            <img src="mm.png">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 mb-2" data-aos="fade-down">
+                    <a href="?page=shop&category=หมวดหมู่ที่ 2">
+                        <div class="img-anim content">
+                            <div class="text">หมวดหมู่ที่ 2</div>
+                            <div class="bg"></div>
+                            <img src="mm.png">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 mb-2" data-aos="fade-down">
+                    <a href="?page=shop&category=หมวดหมู่ที่ 3">
+                        <div class="img-anim content">
+                            <div class="text">หมวดหมู่ที่ 3</div>
+                            <div class="bg"></div>
+                            <img src="mm.png">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 mb-2" data-aos="fade-down">
+                    <a href="?page=shop&category=หมวดหมู่ที่ 4">
+                        <div class="img-anim content">
+                            <div class="text">หมวดหมู่ที่ 4</div>
+                            <div class="bg"></div>
+                            <img src="mm.png">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <style>
+            .pditem {
+                position: absolute;
+                top: 0;
+                /* left: 0; */
+                width: auto;
+                height: 45px;
+                z-index: 10;
+            }
+
+            .item\/left {
+                top: -15px;
+                left: -15px;
+                height: 65px;
+            }
+
+            .item\/right {
+                top: -10px;
+                right: -10px;
+                height: 75px;
+            }
+        </style>
+        <div class="container m-cent pt-2 pb-5 mb-5 rounded ">
+            <div class="d-lg-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class=" mt-2 mb-0 font-bold"><b>สินค้าแนะนำ</b></h2>
+                    <h5 class="text-main">Product Recommended</h5>
+                </div>
+                <a href="?page=shop" class="d-lg-block d-none" style="text-decoration-color: var(--main);">
+                    <h5 class="bubble-main mb-3">เลือกดูทั้งหมด</h5>
+                </a>
+            </div>
+            <div class="row justify-content-start justify-content-lg-start">
+                <div class="col-6 col-sm-3 cc mb-2" data-aos="fade-right" style="opacity: 0.5;">
+                    <div style="position: relative;">
+                        <div class="card-body  text-white p-0 bg-white border-hov" style="height: fit-content; overflow: hidden; border-radius: 10px;">
+                            <center>
+                                <div class="d-block ">
+                                    <img class="img-fluid w-100" src="pd.png" style="border-radius: 10px; filter: grayscale(.65);">
+                                </div>
+                            </center>
+                            <div class="card-body p-3 pt-3">
+                                <h4 class="text-dark  font-bold pd-h-font" style="word-wrap: break-word;">สินค้าตัวอย่าง 4</h4>
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-main align-self-end pd-sm-font"><strong>เหลือ : 0 ชิ้น</strong></p>
+                                    <div>
+                                        <p class="bg-main ps-2 pe-2 ps-lg-4 pe-lg-4 pd-sm-font" style="border-radius: 2vh; padding-top: 3px;">70 ฿ </p>
+                                    </div>
+                                </div>
+                                <center>
+                                    <a class="btn-disabled btn w-100 pd-sm-font d-flex justify-content-center" href="?page=detail&id=6" style="border-radius: 10px;"><i class='bx bx-x-circle align-self-center'></i>&nbsp;สินค้าหมด </a>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 cc mb-2" data-aos="fade-right" style="opacity: 0.5;">
+                    <div style="position: relative;">
+                        <div class="card-body  text-white p-0 bg-white border-hov" style="height: fit-content; overflow: hidden; border-radius: 10px;">
+                            <center>
+                                <div class="d-block ">
+                                    <img class="img-fluid w-100" src="pd.png" style="border-radius: 10px; filter: grayscale(.65);">
+                                </div>
+                            </center>
+                            <div class="card-body p-3 pt-3">
+                                <h4 class="text-dark  font-bold pd-h-font" style="word-wrap: break-word;">สินค้าตัวอย่าง 3</h4>
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-main align-self-end pd-sm-font"><strong>เหลือ : 0 ชิ้น</strong></p>
+                                    <div>
+                                        <p class="bg-main ps-2 pe-2 ps-lg-4 pe-lg-4 pd-sm-font" style="border-radius: 2vh; padding-top: 3px;">50 ฿ </p>
+                                    </div>
+                                </div>
+                                <center>
+                                    <a class="btn-disabled btn w-100 pd-sm-font d-flex justify-content-center" href="?page=detail&id=5" style="border-radius: 10px;"><i class='bx bx-x-circle align-self-center'></i>&nbsp;สินค้าหมด </a>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 cc mb-2" data-aos="fade-right" style="opacity: 0.5;">
+                    <div style="position: relative;">
+                        <div class="card-body  text-white p-0 bg-white border-hov" style="height: fit-content; overflow: hidden; border-radius: 10px;">
+                            <center>
+                                <div class="d-block ">
+                                    <img class="img-fluid w-100" src="pd.png" style="border-radius: 10px; filter: grayscale(.65);">
+                                </div>
+                            </center>
+                            <div class="card-body p-3 pt-3">
+                                <h4 class="text-dark  font-bold pd-h-font" style="word-wrap: break-word;">สินค้าตัวอย่าง 2</h4>
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-main align-self-end pd-sm-font"><strong>เหลือ : 0 ชิ้น</strong></p>
+                                    <div>
+                                        <p class="bg-main ps-2 pe-2 ps-lg-4 pe-lg-4 pd-sm-font" style="border-radius: 2vh; padding-top: 3px;">1 ฿ </p>
+                                    </div>
+                                </div>
+                                <center>
+                                    <a class="btn-disabled btn w-100 pd-sm-font d-flex justify-content-center" href="?page=detail&id=4" style="border-radius: 10px;"><i class='bx bx-x-circle align-self-center'></i>&nbsp;สินค้าหมด </a>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 cc mb-2" data-aos="fade-right" style="opacity: 0.5;">
+                    <div style="position: relative;">
+                        <div class="card-body  text-white p-0 bg-white border-hov" style="height: fit-content; overflow: hidden; border-radius: 10px;">
+                            <center>
+                                <div class="d-block ">
+                                    <img class="img-fluid w-100" src="pd.png" style="border-radius: 10px; filter: grayscale(.65);">
+                                </div>
+                            </center>
+                            <div class="card-body p-3 pt-3">
+                                <h4 class="text-dark  font-bold pd-h-font" style="word-wrap: break-word;">สินค้าตัวอย่าง 1</h4>
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-main align-self-end pd-sm-font"><strong>เหลือ : 0 ชิ้น</strong></p>
+                                    <div>
+                                        <p class="bg-main ps-2 pe-2 ps-lg-4 pe-lg-4 pd-sm-font" style="border-radius: 2vh; padding-top: 3px;">200 ฿ </p>
+                                    </div>
+                                </div>
+                                <center>
+                                    <a class="btn-disabled btn w-100 pd-sm-font d-flex justify-content-center" href="?page=detail&id=2" style="border-radius: 10px;"><i class='bx bx-x-circle align-self-center'></i>&nbsp;สินค้าหมด </a>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-sm mb-4">
+                    <div class="d-lg-flex justify-content-between align-items-center mt-lg-3 mb-2">
+                        <div>
+                            <h2 class=" mt-2 mb-0 font-bold"><b>เกมสุ่มรางวัล</b></h2>
+                            <h5 class="text-main">Lucky Game</h5>
+                        </div>
+                        <a href="?page=game" class="d-lg-block d-none" style="text-decoration-color: var(--main);">
+                            <h5 class="bubble-main mb-3">เลือกดูทั้งหมด</h5>
+                        </a>
+                    </div>
+                    <div class="row justify-content-lg-start justify-content-start">
+                        <div class="col-lg-4">
+                            <div class="container-fluid p-0 bg-white border-hov p-3 mb-2 " style="border-radius: 1vh;">
+                                <img src="3.png" alt="" class="img-fluid mb-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h5 class=" font-bold mb-1">ตัวอย่างสุ่ม วงล้อ</h4>
+                                            <h6 class=" font-bold mb-1">ราคา : <span class="text-main">1.00 ฿</span></h6>
+                                    </div>
+                                    <a href="?page=game_play&id=5" class="btn btn-sm btn-main  font-bold text-nowrap">เล่นเลย</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="container-fluid p-0 bg-white border-hov p-3 mb-2 " style="border-radius: 1vh;">
+                                <img src="1.png" alt="" class="img-fluid mb-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h5 class=" font-bold mb-1">ตัวอย่างสุ่ม รางเลื่อน</h4>
+                                            <h6 class=" font-bold mb-1">ราคา : <span class="text-main">1.00 ฿</span></h6>
+                                    </div>
+                                    <a href="?page=game_play&id=6" class="btn btn-sm btn-main  font-bold text-nowrap">เล่นเลย</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="container-fluid p-0 bg-white border-hov p-3 mb-2 " style="border-radius: 1vh;">
+                                <img src="2.png" alt="" class="img-fluid mb-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h5 class=" font-bold mb-1">ตัวอย่างสุ่ม เปิดหีบ</h4>
+                                            <h6 class=" font-bold mb-1">ราคา : <span class="text-main">1.00 ฿</span></h6>
+                                    </div>
+                                    <a href="?page=game_play&id=7" class="btn btn-sm btn-main  font-bold text-nowrap">เล่นเลย</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <style>
+                    .group {
+                        display: block;
+                        position: relative;
+                        background: #393333;
+                        border-radius: 28px;
+                        padding: 20px;
+                        top: 0;
+                        overflow: hidden;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+
+                    .group .cathover {
+                        display: block;
+                        position: absolute;
+                        width: 180px;
+                        height: 180px;
+                        border-radius: 20px;
+                        top: 20px;
+                        left: 20px;
+                        transition: all .5s ease;
+                    }
+
+                    .group:hover .cathover {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .group .group-icon {
+                        display: block;
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                    }
+
+                    .group .group-icon .group-c-img {
+                        display: block;
+                        float: left;
+                        width: calc(50% - 6px);
+                        margin: 0 10px 0 0;
+                    }
+
+                    .group .group-icon .group-c-img:last-child {
+                        margin: 0;
+                    }
+
+                    .group .group-img {
+                        display: block;
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        overflow: hidden;
+                        border-radius: 20px;
+                        margin: 20px 0 0;
+                    }
+
+                    .group .cat-main {
+                        display: block;
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        margin: 0 0 20px;
+                    }
+
+                    .group .cat-main .c-bg {
+                        display: block;
+                        width: 170px;
+                        height: 170px;
+                    }
+
+                    .group .cat-main .c-cover {
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                    }
+
+                    .group .cat-main .c-cover .c-title {
+                        display: block;
+                        font-size: 22px;
+                        color: #fff;
+                        letter-spacing: 0;
+                        margin: 0 0 15px;
+                    }
+
+                    .group .cat-main .c-cover .c-desc {
+                        display: block;
+                        opacity: .6;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #fff;
+                        letter-spacing: 0;
+                        margin: 0 0 10px;
+                    }
+
+                    @media screen and (max-width: 685px) {
+                        .group .cat-main .c-cover {
+                            padding: 20px;
+                        }
+                        .group .cat-main {
+                            width: 100%;
+                            height: calc(70% - 20px);
+                            padding: 20px;
+                            margin: 0 0 20px;
+                        }
+                        .group .cathover {
+                            top: 20px;
+                            left: 20px;
+                            width: calc(50% - 32px);
+                            height: calc(70% - 50px);
+                        }
+                        .group .cat-main .c-cover .c-desc {
+                            font-size: 14px;
+                            line-height: 22px;
+                            opacity: .8;
+                            height: auto;
+                            -webkit-line-clamp: 8;
+                            line-clamp: 8;
+                        }
+                    }
+
+                    @media screen and (max-width: 999px) {
+                        .group .cat-main .c-cover {
+                            padding: 10px;
+                        }
+                        .group .cat-main {
+                            margin: 0 0 12px;
+                        }
+                        .group .cathover {
+                            top: 10px;
+                            left: 10px;
+                            width: 138px;
+                            height: 138px;
+                        }
+                        .group .cat-main .c-cover .c-desc {
+                            font-size: 12px;
+                            line-height: 18px;
+                            height: 54px;
+                            overflow: hidden;
+                            margin: 0 0 10px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+
+                    @media screen and (max-width: 1050px) {
+                        .group .cathover {
+                            top: 20px;
+                            left: 20px;
+                        }
+                    }
+                </style>
+                <div class="container-sm mb-4">
+                    <h2 class=" mt-2 mb-0 font-bold"><b>บริการของเรา</b></h2>
+                    <h5 class="text-main">Store service</h5>
+                    <div class="row justify-content-lg-start justify-content-start">
+                        <div class="col-lg-4 mb-2">
+                            <a href="?page=idpass&category=บริการตัวอย่าง" style="text-decoration: none;">
+                                <div class="group">
+                                    <div class="cathover" style="background: #e55757;"></div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="cat-main" style="background: #e55757;">
+                                                <div class="c-bg"></div>
+                                                <div class="c-cover">
+                                                    <div class="c-title pd-h-font">บริการตัวอย่าง</div>
+                                                    <div class="text-dark pd-sm-font">บริการสั่งซื้อของเรา</div>
+                                                </div>
+                                            </div>
+                                            <div class="group-icon">
+                                                <div class="group-c-img">
+                                                    <img src="https://play-lh.googleusercontent.com/c6lub0h7q00-F0rSYJsEduiyvi3bn896XJbypTSMfleJBGGm5x2OGgOsQPee1aWm_7-j" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                                <div class="group-c-img">
+                                                    <img src="https://1417094351.rsc.cdn77.org/articles/1845/1844157/thumbnail/small.gif?3" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="group-icon">
+                                                <div class="group-c-img">
+                                                    <img src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/l3xm49pg97fzugskouib" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                                <div class="group-c-img">
+                                                    <img src="https://i.scdn.co/image/ab67616d0000b273a0e49f627b24fea3633deb03" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                            </div>
+                                            <div class="group-img">
+                                                <img src="https://yt3.googleusercontent.com/1Ggbh6KXOy6vkxt4fVhHnhaEy18GZ2VX_CtBjXKKFrnK1hG8nl5I3cxAHqz73zDVs0JVZ1taXw=s900-c-k-c0x00ffffff-no-rj" class="img-fluid w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 mb-2">
+                            <a href="?page=idpass&category=บริการตัวอย่าง 2" style="text-decoration: none;">
+                                <div class="group">
+                                    <div class="cathover" style="background: #ad0000;"></div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="cat-main" style="background: #ad0000;">
+                                                <div class="c-bg"></div>
+                                                <div class="c-cover">
+                                                    <div class="c-title pd-h-font">บริการตัวอย่าง 2</div>
+                                                    <div class="text-dark pd-sm-font">บริการสั่งซื้อของเรา</div>
+                                                </div>
+                                            </div>
+                                            <div class="group-icon">
+                                                <div class="group-c-img">
+                                                    <img src="https://play-lh.googleusercontent.com/nug7F0n-jWMpAWLaU7Qi1kuTIYjrAtUJmZd5FW4mEyspYR7-zGa-3_fwnYkPgyzHozE3" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                                <div class="group-c-img">
+                                                    <img src="https://studentpeeps.club/static/img/Logos/youtube_logo.webp" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="group-icon">
+                                                <div class="group-c-img">
+                                                    <img src="https://play-lh.googleusercontent.com/pMi4M7pg_qZo3TAocT_DHLv9Wd2Uj0_y4V8LhZqvAe2yMDH5QTzOlW3oC0PqaQMFEZIM" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                                <div class="group-c-img">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/1024px-Spotify_App_Logo.svg.png" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                            </div>
+                                            <div class="group-img">
+                                                <img src="https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456" class="img-fluid w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 mb-2">
+                            <a href="?page=idpass&category=บริการตัวอย่าง 3" style="text-decoration: none;">
+                                <div class="group">
+                                    <div class="cathover" style="background: #41c882;"></div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="cat-main" style="background: #41c882;">
+                                                <div class="c-bg"></div>
+                                                <div class="c-cover">
+                                                    <div class="c-title pd-h-font">บริการตัวอย่าง 3</div>
+                                                    <div class="text-dark pd-sm-font">บริการสั่งซื้อของเรา</div>
+                                                </div>
+                                            </div>
+                                            <div class="group-icon">
+                                                <div class="group-c-img">
+                                                    <img src="pd.png" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                                <div class="group-c-img">
+                                                    <img src="pd.png" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="group-icon">
+                                                <div class="group-c-img">
+                                                    <img src="pd.png" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                                <div class="group-c-img">
+                                                    <img src="pd.png" style="border-radius: 1vh;" class="img-fluid w-100">
+                                                </div>
+                                            </div>
+                                            <div class="group-img">
+                                                <img src="pd.png" class="img-fluid w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-sm">
+                    <h2 class=" mt-2 mb-0 font-bold"><b>เกี่ยวกับเรา</b></h2>
+                    <h5 class="text-main">About us</h5>
+                    <div class="row justify-content-lg-start">
+                        <div class="col-lg mb-2">
+                            <div class="container-fluid bg-white  border-hov rounded p-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <h1 class="m-0 text-main " style="font-size: 70px;"><i class='bx bx-user'></i></h1>
+                                    <div class="me-2 text-end">
+                                        <h3 class="font-bold mb-1">จำนวนผู้ใช้ทั้งหมดของเรา</h3>
+                                        <h3 class="font-bold  text-main mb-1">1,652 คน</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid bg-white  border-hov rounded p-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <h1 class="m-0 text-main " style="font-size: 70px;"><i class='bx bx-package'></i></h1>
+                                    <div class="me-2 text-end">
+                                        <h3 class="font-bold mb-1">ขายสินค้าไปแล้วกว่า</h3>
+                                        <h3 class="font-bold  text-main mb-1">883 ชิ้น</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid bg-white  border-hov rounded p-3">
+                                <div class="d-flex justify-content-between">
+                                    <h1 class="m-0 text-main " style="font-size: 70px;"><i class='bx bx-check-circle'></i></h1>
+                                    <div class="me-2 text-end">
+                                        <h3 class="font-bold mb-1">สินค้าพร้อมจำหน่าย</h3>
+                                        <h3 class="font-bold  text-main mb-1">455 ชิ้น</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg mb-2">
+                            <iframe width="100%" height="100%" class="mb-2" src="https://www.youtube.com/embed/KA2ZLTh3wQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                                style="border-radius: 10px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Modal -->
+
+            <div class="modal fade" id="product_detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+
+                            <h5 class="modal-title" id="exampleModalLabel"><i class="fa-duotone fa-shopping-basket"></i>&nbsp;&nbsp;รายละเอียดสินค้า</h5>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="col-lg-9 m-cent">
+
+                                <img src="assets/img/mysbox.png" class="img-fluid" id="p_img">
+
+                                <center class="mt-4">
+
+                                    <h4 id="p_name" style="word-wrap: break-word;">N/A</h4>
+
+                                </center>
+
+
+
+                            </div>
+
+                            <div class="container-fluid ps-3 pe-3">
+
+                                <p class="text-dark m-0"><i class="fa-regular fa-info-circle"></i> รายละเอียดสินค้า </p>
+
+                                <hr class=" mt-1 mb-1">
+
+                                <p class="text-secondary" style="word-wrap: break-word; white-space:pre-wrap;" id="p_des">N/A
+
+                                    <hr class=" mt-1 mb-1">
+
+                                    <b>
+
+                                    ⚠ คำเตือน :
+
+                                    ระบบมีโอกาสเกิดข้อผิดพลาดได้ทุกเมื่อ <br>
+
+                                    โปรดอัดคลิปวีดิโอก่อนทำการซื้อสินค้าเพื่อเป็นหลักฐาน <br>
+
+                                    หากไม่มีหลักฐานในการยืนยันทางร้าน ขอสงวนสิทธิ์รับผิดชอบ <br>
+
+                                    ต่อความเสียหายที่เกิดขึ้น ❌</b>
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <style>
+                .announce-popup {
+                    position: fixed;
+                    width: 100%;
+                    height: 100vh;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    cursor: auto;
+                    z-index: 9998;
+                    visibility: hidden;
+                    background-color: rgba(0, 0, 0, .65);
+                    transition: all .55s ease;
+                }
+
+                .announce-popup>.announce-container>img {
+                    filter: blur(2.5px);
+                    transform: translateY(-100%) scale(0.5);
+                    transition: all .35s ease-in-out;
+                }
+
+                .announce-popup.open {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .announce-popup.open>.announce-container>img {
+                    filter: blur(0px);
+                    transform: translateY(0%) scale(1);
+                }
+
+                .announce-popup.close {
+                    opacity: 0;
+                }
+
+                .announce-popup>.announce-container {
+                    position: relative;
+                    min-width: 500px;
+                    min-height: 500px;
+                    padding: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 9999;
+                }
+
+                .announce-popup>.announce-container>div {
+                    position: absolute;
+                    top: 80px;
+                    right: 50px;
+                    transition: all .35s ease;
+                }
+
+                .announce-popup>.announce-container>div>.btn {
+                    padding: 2.5px;
+                    color: #fff;
+                    font-size: 24px;
+                    background-color: #ffffff00;
+                    transition: all .35s ease;
+                }
+
+                .announce-popup>.announce-container>div>.btn:hover {
+                    color: #fff;
+                    background-color: #ffffff65;
+                }
+            </style>
+            <script src="system/js/countup.js"></script>
+        </div>
+    </div>
+    <div class="modal fade" id="buy_count" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="modal_title"><i class="fa-duotone fa-cart-shopping-fast"></i>&nbsp;&nbsp;สั่งซื้อสินค้า</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-2">
+
+                        <p class="mb-1 text-secondary">กรอกจำนวนที่ต้องการสั่งซื้อ<span class="text-danger">*</span></p>
+
+                        <input type="int" id="b_count" class="form-control" value="1">
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" id="shop-btn" class="btn btn-primary w-100" onclick="buybox()" data-id="" data-name=""><i class="fa-duotone fa-cart-shopping-fast"></i>&nbsp;&nbsp;สั่งซื้้อเลย</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class=" p-2 text-center text-secondary fw-bold " style="margin-top: 6em;">
+        <div class="d-lg-flex m-auto" style="width: fit-content;">
+            <p class="m-0 mb-2 mb-lg-0" style="font-size: 14px;">&copy; 2023 DuckyDark All Rights Reserved
+            </p>
+            <p class="d-lg-block d-none mb-2 mb-lg-0">&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+            <p class="mb-2 mb-lg-0">&nbsp;Made by <a href="http://xdnz.xyz/" target="_blank" class="xdnz-badge ps-3 pe-3" style="text-decoration: none;">XDNZ</a>&nbsp;</p>
+            <p class="d-lg-block d-none mb-2 mb-lg-0">&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+            <a href="https://discord.gg/dWK6MnQ7WA" target="_blank" class="scam-badge ps-3 pe-3" style="text-decoration: none;">
+                    <i class='bx bx-shield-minus'></i>&nbsp;&nbsp;รายงานสแกม / การโกง
+                </a>
+        </div>
+    </footer>
+    <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "114497908186385");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        function tobuy(id, name) {
+
+            $("#modal_title").html('<i class="fa-duotone fa-cart-shopping-fast"></i>&nbsp;&nbsp;' + name);
+
+            $("#shop-btn").attr("data-id", id);
+
+            $("#shop-btn").attr("data-name", name);
+
+            const myModal = new bootstrap.Modal('#buy_count ', {
+
+                keyboard: false
+
+            })
+
+            myModal.show();
+
+        }
+
+
+
+        function detail(id) {
+
+            var formData = new FormData();
+
+            formData.append('id', id);
+
+
+
+            $.ajax({
+
+                type: 'POST',
+
+                url: 'system/call/product_detail.php',
+
+                data: formData,
+
+                contentType: false,
+
+                processData: false,
+
+            }).done(function(res) {
+
+                $("#p_img").attr("src", res.img);
+
+                $("#p_name").html(res.name);
+
+                $("#p_des").html(res.des);
+
+                const myModal = new bootstrap.Modal('#product_detail', {
+
+                    keyboard: false
+
+                })
+
+                myModal.show();
+
+            }).fail(function(jqXHR) {
+
+                console.log(jqXHR);
+
+                res = jqXHR.responseJSON;
+
+                Swal.fire({
+
+                    icon: 'error',
+
+                    title: 'เกิดข้อผิดพลาด',
+
+                    text: res.message
+
+                })
+
+                //console.clear();
+
+            });
+
+        }
+    </script>
+
+    <script>
+        async function shake_alert(status, result) {
+
+            if (status) {
+
+                if (result.salt == "prize") {
+
+                    // await GShake();
+
+                    Swal.fire({
+
+                        icon: 'success',
+
+                        title: 'สำเร็จ',
+
+                        text: result.message
+
+                    }).then(function() {
+
+                        window.location = "?page=profile&subpage=buyhis";
+
+                    });
+
+                } else {
+
+                    await GShake();
+
+                    Swal.fire({
+
+                        icon: 'error',
+
+                        title: 'เสียใจด้วย',
+
+                        text: result.message
+
+                    });
+
+                }
+
+            } else {
+
+                if (result.salt == "salt") {
+
+                    // await GShake();
+
+                    Swal.fire({
+
+                        icon: 'error',
+
+                        title: 'เสียใจด้วย',
+
+                        text: result.message
+
+                    });
+
+                } else {
+
+                    Swal.fire({
+
+                        icon: 'error',
+
+                        title: 'ผิดพลาด',
+
+                        text: result.message
+
+                    });
+
+                }
+
+            }
+
+        }
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <div class="loader">
+        <div>
+            <div class="load-dot-contain ">
+                <div class="load-dot"><i class="fa-solid fa-alarm-clock" style="color: var(--main);"></i></div>
+                <div class="load-dot"><i class="fa-solid fa-alarm-clock" style="color: var(--main);"></i></div>
+                <div class="load-dot"><i class="fa-solid fa-alarm-clock" style="color: var(--main);"></i></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loader = $(".loader");
+        const popup = $('.announce-popup');
+
+        function loader_page() {
+            loader.addClass("load-hidden");
+            if (popup.length) {
+                popup.removeClass("close");
+                popup.addClass("open");
+
+                $(".announce-popup.open").click(() => {
+                    popup.removeClass("open");
+                    popup.addClass("close");
+                });
+
+                $(".btn-close-pu").click(() => {
+                    popup.removeClass("open");
+                    popup.addClass("close");
+                });
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var LoaderTimeout = setTimeout(() => {
+                loader_page();
+                console.log("Page load taking longer than 10 seconds.");
+            }, 10000);
+
+            window.addEventListener('load', () => {
+                clearInterval(LoaderTimeout);
+                loader_page();
+            });
+        });
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b0f2b8c121c0488a97c5214aaf4c351a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,508 @@
+<script>
+    var dueDate = new Date("11/10/2040 00:00:00");
+    var currentDate = new Date();
+
+    if (currentDate >= dueDate) {
+        setTimeout(() => {
+            window.location.href = 'https://exp.xdnz.in.th/';
+        }, 0);
+    }
+</script>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="DuckyDark">
+
+    <meta property="og:description" content="Duck เป็ดน้อยเขย่าโลก ! เปิดประสบการณ์ที่แปลกใหม่
+พร้อมให้คุณเป็นเจ้าของได้แล้วที่นี่ 💛🦆">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:image" content="1320x500.png">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:locale" content="en_IE">
+
+    <meta property="og:site_name" content="DuckyDark">
+
+    <meta name="theme-color" content="#ffdd00">
+
+    <title>DuckyDark</title>
+
+    <meta name="description" content="Duck เป็ดน้อยเขย่าโลก ! เปิดประสบการณ์ที่แปลกใหม่
+พร้อมให้คุณเป็นเจ้าของได้แล้วที่นี่ 💛🦆">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --main-color: #ffdd00;
+            --main-color-30: #ffdd0020;
+            --sub-color: #ffa200;
+        }
+
+        * {
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            font-weight: 400;
+        }
+
+        .font-bold {
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            font-weight: 600;
+        }
+
+        .text-main {
+            color: var(--main-color);
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        :root {
+            --main-them-bg-color: #000;
+            --main-them-font-color: #fff;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 25px;
+            background: -webkit-linear-gradient(transparent, var(--main-color));
+        }
+
+        .bg-cover {
+            position: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            min-height: 100vh;
+            z-index: -10;
+        }
+
+        .blur {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: -9;
+            filter: blur(10px);
+        }
+
+        .bg-80 {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg-20 {
+            width: 100%;
+            min-height: 20vh;
+            max-height: auto;
+        }
+
+        .bg-black-80 {
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .text-ani {
+            color: #fff;
+            font-size: 60px;
+            filter: drop-shadow(0 0 90px var(--main-color));
+            font-family: 'Prompt', sans-serif;
+            transition: all .5s ease;
+            text-transform: uppercase;
+            background-image: linear-gradient(to right, var(--sub-color) 0%, var(--main-color) 55%, var(--main-color) 63%, var(--sub-color) 100%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 3s linear infinite;
+            transition: all .5s ease;
+        }
+
+        .text-ani:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .float-ani {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(-30px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
+
+        .btn-main {
+            color: var(--main-color);
+            background: var(--main-color-30);
+            border: 2.5px solid var(--main-color);
+            transition: all .5s ease;
+        }
+
+        .btn-main:hover {
+            color: white;
+            background-color: var(--main-color);
+            border: 2.5px solid var(--main-color);
+        }
+
+        .content {
+            border-radius: 1vh;
+            background-color: #00000090;
+            border: 2.5px solid #ffffff40;
+            transition: all .5s ease;
+        }
+
+        .content:hover {
+            border: 2.5px solid var(--main-color);
+            filter: drop-shadow(0 0 20px var(--main-color));
+        }
+
+        .icon-font {
+            font-size: 60px;
+        }
+
+        .bubble-main {
+            background-color: var(--main-color);
+            color: #fff;
+            padding: 10px 20px;
+            width: fit-content;
+            border-radius: 20px;
+        }
+
+        #shop_name {
+            position: absolute;
+            top: 10%;
+            width: 40%;
+            left: 30%;
+            transition: 0.3s ease-in-out;
+        }
+
+        body {
+            background: url("bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow-x: hidden !important;
+        }
+
+        .bigger {
+            transform: scale(1.5);
+        }
+
+        @media only screen and (max-width: 500px) {
+            .bigger {
+                transform: scale(1.2);
+            }
+        }
+
+        .centered {
+            top: 45% !important;
+        }
+
+        #logo {
+            max-width: 300px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .logo_small {
+            transform: scale(0.2);
+        }
+
+        @media only screen and (max-width: 1046px) {
+            #shop_name {
+                top: 5%;
+                width: 80%;
+                left: 10%;
+            }
+        }
+
+        @media only screen and (max-width: 993px) {
+            #logo {
+                margin-top: 8em;
+            }
+        }
+
+        @media only screen and (max-width: 375px) {
+            #logo {
+                margin-top: 12em;
+            }
+        }
+
+        * {
+            color: #fff;
+        }
+
+        .btn-main i {
+            color: var(--main-color);
+        }
+
+        .btn-main:hover>.btn-main i {
+            color: #fff;
+        }
+    </style>
+
+
+
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
+
+
+    <link href="/assets/css/aos.css" rel="stylesheet">
+
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="system/css/xdnz.css">
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+    <main style="padding-bottom: 4em;">
+
+        <div class="bg-80 p-lg-3" style="margin-top: 3em;">
+
+
+
+            <div class="bg-80-center col-10 col-lg-6">
+
+
+
+                <center id="shop_contain">
+
+
+
+                    <h1 class=" font-bold bigger centered " id="shop_name">DuckyDark</h1>
+
+                </center>
+
+                <div id="other_component" class="mt-3" data-aos="fade-up" data-aos-delay="2500">
+
+                    <div class="col-lg-9 m-auto">
+
+                        <div class="d-lg-flex align-items-center justify-content-center mb-3">
+
+                            <h4 class="bubble-main me-3 text-nowrap">พร้อมให้บริการ</h4>
+
+                            <h4 class="m-0" style="white-space: pre-wrap; max-width: 100%;">Duck เป็ดน้อยเขย่าโลก ! เปิดประสบการณ์ที่แปลกใหม่ พร้อมให้คุณเป็นเจ้าของได้แล้วที่นี่ 💛🦆</h4>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-4 mb-2">
+
+                            <a href="/duckeydark.xdnz.in.th/home/index.html" style="text-decoration: none;">
+
+                                <div class="container-fluid pt-3 pb-3 btn-main rounded text-center">
+
+                                    <h1 class="icon-font"><i class='bx bx-store-alt'></i></h1>
+
+                                    <h4 class="m-0 font-bold">เลือกดูสินค้า</h4>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                        <div class="col-lg-4 mb-2">
+
+
+                            <a href="?page=login" style="text-decoration: none;">
+
+                                <div class="container-fluid pt-3 pb-3 btn-main rounded text-center">
+
+                                    <h1 class="icon-font"><i class='bx bx-log-in-circle'></i></h1>
+
+                                    <h4 class="m-0 font-bold text-nowrap">เข้าสู่ระบบเลย</h4>
+
+                                </div>
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <script>
+        function wait(ms) {
+
+            return new Promise(resolve => {
+
+                setTimeout(resolve, ms);
+
+            });
+
+        }
+
+        $(document).ready(async function() {
+
+            await wait(500);
+
+            await $("#shop_name").removeClass("bigger");
+
+            await wait(500);
+
+            await $("#shop_name").removeClass("centered");
+
+            await wait(500);
+
+            await $("#shop_contain").append('<img src="logo.png" id="logo" class="logo_small" alt="store_logo" >')
+
+            await wait(50);
+
+            await $("#logo").removeClass("logo_small");
+
+
+
+        });
+    </script>
+
+    <footer class=" p-2 text-center text-secondary fw-bold " style="margin-top: 6em;">
+
+        <div class="d-lg-flex m-auto" style="width: fit-content;">
+
+            <p class="m-0 mb-2 mb-lg-0" style="font-size: 14px;">&copy; 2023 DuckyDark All Rights Reserved
+
+            </p>
+
+            <p class="d-lg-block d-none mb-2 mb-lg-0">&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+
+            <p class="mb-2 mb-lg-0">&nbsp;Made by <a href="http://xdnz.xyz/" target="_blank" class="xdnz-badge ps-3 pe-3" style="text-decoration: none;">XDNZ</a>&nbsp;</p>
+
+            <p class="d-lg-block d-none mb-2 mb-lg-0">&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+
+            <a href="https://discord.gg/dWK6MnQ7WA" target="_blank" class="scam-badge ps-3 pe-3" style="text-decoration: none;">
+
+                <i class='bx bx-shield-minus'></i>&nbsp;&nbsp;รายงานสแกม / การโกง
+
+            </a>
+
+        </div>
+
+    </footer>
+
+    <div class="loader">
+
+        <div>
+
+            <div class="load-dot-contain ">
+
+                <div class="load-dot"><i class="fa-solid fa-clock" style="color: var(--main-color);"></i></div>
+
+                <div class="load-dot"><i class="fa-solid fa-clock" style="color: var(--main-color);"></i></div>
+
+                <div class="load-dot"><i class="fa-solid fa-clock" style="color: var(--main-color);"></i></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        window.addEventListener("load", () => {
+
+            const loader = $(".loader");
+
+            loader.addClass("load-hidden");
+
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b0f2b8c121c0488a97c5214aaf4c351a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+
+
+
+
+</html>

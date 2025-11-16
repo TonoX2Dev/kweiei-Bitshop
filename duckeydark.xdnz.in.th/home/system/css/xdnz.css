@@ -1,0 +1,194 @@
+.xdnz-badge {
+    background: #6610f220;
+    color: #6610f2;
+    border-radius: 5px;
+}
+
+.scam-badge {
+    color: #ff583a;
+    background: #ff583a30;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.offcanvas.showing {
+    max-width: 80% !important;
+}
+
+.offcanvas.show {
+    max-width: 80% !important;
+}
+
+.sq-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 1vh;
+}
+
+.sq-green {
+    background: #75ff2a62 !important;
+    color: #128d26 !important;
+}
+
+.sq-blue {
+    background: #8e90f250 !important;
+    color: #696cff !important;
+}
+
+.sq-yellow {
+    background: #ffbd3650 !important;
+}
+
+.sq-yellow i {
+    color: #ffac02 !important;
+}
+
+.fb-control {
+    width: 100%;
+}
+
+@media only screen and (max-width: 550px) {
+    .fb-control {
+        transform: scale(0.95);
+    }
+}
+
+/* loader set */
+
+.loader {
+    height: 100vh;
+    width: 100%;
+    background: var(--main-them-bg-color);
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.2s ease-in-out;
+}
+
+.load-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.load-dot-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.load-dot {
+    background: none;
+}
+
+.load-dot:nth-child(1) {
+    animation: blow-up 1s infinite;
+}
+
+.load-dot:nth-child(2) {
+    animation: blow-up 1s infinite;
+    animation-delay: 250ms;
+}
+
+.load-dot:nth-child(3) {
+    animation: blow-up 1s infinite;
+    animation-delay: 500ms;
+}
+
+@keyframes blow-up {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.table th,
+td {
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 992px) {
+    .margin-login {
+        margin-top: 30%;
+    }
+}
+
+/* New year effect */
+
+.firework {
+    z-index: 1002;
+    position: fixed;
+    bottom: -100%;
+    max-width: 20%;
+    animation: totop 3.5s ease-in;
+}
+
+@keyframes totop {
+    0% {
+        position: fixed;
+        bottom: -50%;
+    }
+    20% {
+        position: fixed;
+        display: block;
+    }
+    100% {
+        position: fixed;
+        bottom: 100%;
+    }
+}
+
+/* <--------------- Chest random  --------------->*/
+
+/* Create and Developed by Gotzillax (xdnz dev team) */
+
+/* Copyright all right reserved 2023 */
+
+#treasure img {
+    transition: 0.2s ease-in-out;
+}
+
+#treasure img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.gshake {
+    animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate(+.8em);
+    }
+    10%,
+    30%,
+    50% {
+        transform: translate(-.2em);
+    }
+    70%,
+    100% {
+        transform: translate(0);
+    }
+}
